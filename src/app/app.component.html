@@ -1,0 +1,40 @@
+<body>
+  <h1>Can we eat Pork Belly?</h1>
+  <br />
+  <form>
+    <mat-card id="homepage-card" *ngIf="showFileUpload">
+      <mat-card-title>🐷<br />
+      Let's get started
+      </mat-card-title>
+      <mat-card-subtitle>Upload a csv containing your recent financial
+        transactions</mat-card-subtitle>
+      <button mat-raised-button color="primary" (click)="file.click()">
+      <mat-icon aria-hidden="false" aria-label="Example Upload Icon">
+        cloud_upload
+      </mat-icon>
+      Upload<input
+        type="file"
+        accept=".csv"
+        id="file"
+        (change)="handleFileInput($event.target.files)"
+        style="display:none;"
+      />
+    </button>
+    </mat-card>
+    <mat-card id="homepage-card" *ngIf="!showFileUpload">
+      <mat-card-title class="title">🐷<br />
+      What is your name?
+      </mat-card-title>
+      <mat-card-subtitle></mat-card-subtitle>
+      <div id="submit-name-bar">
+        <mat-form-field id="submit-name-field" appearance="fill" floatLabel="never">
+          <input matInput [(ngModel)]="userName" required name="first" placeholder="e.g. Peppa Pig">
+        </mat-form-field>
+        <button (click)="submitName()" id="submit-button" mat-icon-button color="primary" aria-label="Example icon button with a heart icon">
+        <mat-icon>arrow_forward</mat-icon>
+      </button>
+      </div>
+    </mat-card>
+    <h1>{{ (getUsers() | async)?.name }}</h1>
+  </form>
+</body>

@@ -1,0 +1,38 @@
+mat-icon {
+  margin-right: 4px;
+}
+#homepage-card {
+  text-align: center;
+}
+h1 {
+  text-align: left;
+  font-family: sans-serif;
+}
+body {
+  width: 75%;
+  margin: auto;
+  padding-top: 50px;
+}
+
+.title {
+  padding-top: 30px;
+}
+
+#submit-name-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+::ng-deep .mat-form-field-wrapper {
+  margin-bottom: -1.25em;
+}
+::ng-deep .mat-form-field-infix {
+  border: none;
+}
+
+#submit-name-field {
+  padding-left: 35px;
+  text-align: center;
+}
