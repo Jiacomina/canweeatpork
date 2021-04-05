@@ -14,7 +14,7 @@ export class AppComponent {
   firebaseService: FirebaseService;
   users: Observable<any>;
   showFileUpload = false;
-  userName: string = "";
+  username: string = "";
 
   constructor(firebaseService: FirebaseService, db: AngularFireDatabase) {
     this.firebaseService = firebaseService;
@@ -47,6 +47,7 @@ export class AppComponent {
       console.log(result);
     };
     reader.readAsText(files.item(0));
+    this.firebaseService.updateUploads(this.username);
   }
 
   parseHeaders(line: string) {
@@ -80,6 +81,7 @@ export class AppComponent {
     newTrans.narration = this.cleanNarration(array[this.headerMap.narration]);
     newTrans.debit = Number(array[this.headerMap.debit]);
     newTrans.credit = Number(array[this.headerMap.credit]);
+    newTrans.username = this.username;
 
     this.transactions.push(newTrans);
   }
@@ -90,8 +92,9 @@ export class AppComponent {
   }
 
   submitName() {
-    if (this.userName) {
-      this.firebaseService.updateUser(this.userName);
+    if (this.username) {
+      this.firebaseService.updateUser(this.username);
+      this.showFileUpload = true;
     } else {
       console.log("No name given");
     }

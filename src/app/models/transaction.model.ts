@@ -3,6 +3,6 @@ export class Transaction {
   narration: string;
   debit: number;
   credit: number;
-  id: number;
-  uploadId: number;
+  uploadId: string;
+  username: string;
 }

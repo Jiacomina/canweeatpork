@@ -8,7 +8,7 @@
       </mat-card-title>
       <mat-card-subtitle>Upload a csv containing your recent financial
         transactions</mat-card-subtitle>
-      <button mat-raised-button color="primary" (click)="file.click()">
+      <button mat-raised-button color="primary" onclick="file.click()">
       <mat-icon aria-hidden="false" aria-label="Example Upload Icon">
         cloud_upload
       </mat-icon>
@@ -28,7 +28,7 @@
       <mat-card-subtitle></mat-card-subtitle>
       <div id="submit-name-bar">
         <mat-form-field id="submit-name-field" appearance="fill" floatLabel="never">
-          <input matInput [(ngModel)]="userName" required name="first" placeholder="e.g. Peppa Pig">
+          <input matInput [(ngModel)]="username" required name="first" placeholder="e.g. Peppa Pig">
         </mat-form-field>
         <button (click)="submitName()" id="submit-button" mat-icon-button color="primary" aria-label="Example icon button with a heart icon">
         <mat-icon>arrow_forward</mat-icon>
