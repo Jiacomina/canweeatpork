@@ -17,13 +17,13 @@
     "@firebase/app": "^0.6.18",
     "@types/jasmine": "3.6.9",
     "@types/jasminewd2": "2.0.8",
-    "@types/node": "14.14.37",
+    "@types/node": "^12.11.1",
     "core-js": "3.10.0",
     "firebase": "8.3.2",
     "moment": "2.29.1",
     "rxjs": "6.6.7",
-    "tslib": "2.1.0",
-    "zone.js": "0.11.4"
+    "tslib": "^1.10.0",
+    "zone.js": "~0.10.2"
   },
   "scripts": {
     "ng": "ng",
@@ -34,13 +34,13 @@
     "e2e": "ng e2e"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.901.1",
-    "@angular/cli": "~9.1.1",
-    "@angular/compiler-cli": "~9.1.1",
+    "@angular-devkit/build-angular": "~0.901.15",
+    "@angular/cli": "^11.2.7",
+    "@angular/compiler-cli": "^11.2.8",
     "@angular/language-service": "~9.1.1",
-    "@types/node": "^12.11.1",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
+    "@types/node": "^12.11.1",
     "codelyzer": "^5.1.2",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~4.2.1",
@@ -52,6 +52,6 @@
     "protractor": "~5.4.3",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
-    "typescript": "~3.8.3"
+    "typescript": "^4.1.5"
   }
 }
