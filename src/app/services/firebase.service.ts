@@ -40,7 +40,7 @@ export class FirebaseService {
       .list(this.UPLOADSPATH)
       .push(newUpload)
       .then((result) => {
-        console.log(result.key);
+        console.log("Upload Key", result.key);
       });
   }
 

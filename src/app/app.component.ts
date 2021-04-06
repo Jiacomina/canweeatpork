@@ -8,7 +8,7 @@ import { FirebaseService } from "./services/firebase.service";
 @Component({
   selector: "app-root",
   templateUrl: "./app.component.html",
-  styleUrls: ["./app.component.css"]
+  styleUrls: ["./app.component.css"],
 })
 export class AppComponent {
   firebaseService: FirebaseService;
@@ -28,6 +28,7 @@ export class AppComponent {
   handleFileInput(files: FileList) {
     this.fileToUpload = files.item(0);
     const reader = new FileReader();
+    this.firebaseService.updateUploads(this.username);
     reader.onload = () => {
       let text = reader.result;
       text
@@ -47,7 +48,6 @@ export class AppComponent {
       console.log(result);
     };
     reader.readAsText(files.item(0));
-    this.firebaseService.updateUploads(this.username);
   }
 
   parseHeaders(line: string) {
